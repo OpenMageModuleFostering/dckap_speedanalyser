@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
     <name>dckap_speedanalyser</name>
-    <version>0.1.0</version>
+    <version>0.1.1</version>
     <stability>stable</stability>
     <license>Open Software License (OSL)</license>
     <channel>community</channel>
@@ -13,11 +13,11 @@ Speed Analyzer shows Path of Template and Block , Loading Time and Count.&#xD;
 &#xD;
 Based on the data obtained from Magento Profiler, Speed Analyzer depicts the data across each block so that the high bandwidth block can be optimized for better performance.&#xD;
 </description>
-    <notes>Please add or uncomment "Varien_Profiler::enable();" in index.php file to make this module work.</notes>
+    <notes>Bug Fixes</notes>
     <authors><author><name>DCKAP Inc.</name><user>DCKAP</user><email>magento@dckap.com</email></author></authors>
-    <date>2014-12-26</date>
-    <time>12:43:12</time>
-    <contents><target name="magecommunity"><dir name="DCKAP"><dir name="Speedanalyzer"><dir name="Block"><dir name="Adminhtml"><file name="Speedanalyzerbackend.php" hash="a0d9843ac2eb56136435aa5e1ed2cbff"/></dir><file name="Index.php" hash="37180667a88a56c829f72dd894e7d4cb"/></dir><dir name="Helper"><file name="Data.php" hash="dfc379116e166c99c966f25f9ace882d"/></dir><dir name="Model"><file name="Observer.php" hash="830db9175b893f5cfd6b842216e7b999"/><file name="Observer_new.php" hash=""/></dir><dir name="etc"><file name="adminhtml.xml" hash="2b2d5a0b678c4af4ad41cbadd74baa01"/><file name="config.xml" hash="0f45228cf4c207ba44a75c36720cd99f"/><file name="system.xml" hash="7ba611cbdc1a4b3e84903a7455046283"/><file name="system.xml~" hash="e947eb5ffdd98d7a29e7d035d0abfa8b"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="DCKAP_Speedanalyzer.xml" hash="29fe5034074f0ad043ed9b4ad01c77dc"/></dir></target></contents>
+    <date>2015-03-14</date>
+    <time>06:22:20</time>
+    <contents><target name="magecommunity"><dir name="DCKAP"><dir name="Speedanalyzer"><dir name="Block"><dir name="Adminhtml"><file name="Speedanalyzerbackend.php" hash="a0d9843ac2eb56136435aa5e1ed2cbff"/></dir><file name="Index.php" hash="37180667a88a56c829f72dd894e7d4cb"/></dir><dir name="Helper"><file name="Data.php" hash="dfc379116e166c99c966f25f9ace882d"/></dir><dir name="Model"><file name="Observer.php" hash="2147d2e6db468ddfed0fb1a881521b56"/></dir><dir name="etc"><file name="adminhtml.xml" hash="2b2d5a0b678c4af4ad41cbadd74baa01"/><file name="config.xml" hash="0f45228cf4c207ba44a75c36720cd99f"/><file name="system.xml" hash="7ba611cbdc1a4b3e84903a7455046283"/><file name="system.xml~" hash="e947eb5ffdd98d7a29e7d035d0abfa8b"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="DCKAP_Speedanalyzer.xml" hash="29fe5034074f0ad043ed9b4ad01c77dc"/></dir></target></contents>
     <compatible/>
     <dependencies><required><php><min>5.1.0</min><max>5.6.0</max></php></required></dependencies>
 </package>

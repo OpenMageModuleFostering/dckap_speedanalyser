@@ -6,18 +6,32 @@ class DCKAP_Speedanalyzer_Model_Observer extends Mage_Core_Block_Abstract {
      
       /* @var $timer Mage_Core_Block_Profiler */
       $timers            = Varien_Profiler::getTimers();   
-      //print_r($timers);exit;
+      $showSpeedAnalyzer = Mage::getStoreConfig('speedanalyzer/general/speedanalyzerenable');      
+      if($showSpeedAnalyzer):
       /* @var $block Mage_Core_Block_Abstract */
       $block             = $observer->getBlock();    
       $transport         = $observer->getTransport();
       $fileName          = $block->getTemplateFile();
       $thisClass         = get_class($block);
       $thisname          = $block->getNameInLayout();
-      $fileLoadTime      = number_format($timers[$fileName]['sum'],4);
-      $blockLoadTime     = number_format($timers['BLOCK: '.$thisname]['sum'],4);
-      $fileLoadCount     = $timers[$fileName]['count'];
-      $blockLoadCount    = $timers['BLOCK: '.$thisname]['count'];
-      $showSpeedAnalyzer = Mage::getStoreConfig('speedanalyzer/general/speedanalyzerenable');
+      if(!empty($timers[$fileName]))
+      {
+        $fileLoadTime      = number_format($timers[$fileName]['sum'],4);      
+        $fileLoadCount     = $timers[$fileName]['count'];
+      }
+      else{
+        $fileLoadTime ='';
+      }
+      if(!empty($timers[$thisname]))
+      {
+        $blockLoadTime     = number_format($timers['BLOCK: '.$thisname]['sum'],4);
+        $blockLoadCount    = $timers['BLOCK: '.$thisname]['count'];
+      }
+      else {
+       $blockLoadTime     = '';
+      }     
+      
+    
       $showPath          =  Mage::getStoreConfig('speedanalyzer/general/templatepath');
       $showTime          =  Mage::getStoreConfig('speedanalyzer/general/showtime');
       $showCount         = Mage::getStoreConfig('speedanalyzer/general/showcount');
@@ -64,7 +78,7 @@ class DCKAP_Speedanalyzer_Model_Observer extends Mage_Core_Block_Abstract {
       $html = $transport->getHtml();
       $html = $preHtml . $html . $postHtml;
       $transport->setHtml($html);
-
+      endif;
     //endif;
   }
 }

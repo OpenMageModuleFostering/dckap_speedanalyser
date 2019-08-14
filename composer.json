@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/dckap_speedanalyser",
+    "type": "magento-module",
+    "license": "Open-Software-License-(OSL)",
+    "homepage": "",
+    "description": "Speed Analyzer helps to analyze the performance of every block and template in the Magento site. ",
+    "authors": [
+    {
+        "name": "DCKAP Inc.",
+        "email": "magento@dckap.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}
